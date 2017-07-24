@@ -5,7 +5,7 @@ import argparse
 import json
 from ConfigParser import SafeConfigParser
 
-caffe_path = '/home/GRAPHICS2/20d_bar/cv/pose/multi-person-pose/caffe_rtpose/'
+caffe_path = '/home/GRAPHICS2/20d_bar/cv/pose/multi-person-pose/caffe_train/'
 import sys, os
 sys.path.insert(0, os.path.join(caffe_path, 'python'))
 import caffe
