@@ -423,7 +423,7 @@ def calcAndWriteStat(sub_dir, layername, kernel, stride, outCH, args):
         json.dump(dictionary, outfile)
 
 def getBash():
-    return ('#!/usr/bin/env sh\n\%s/build/tools/caffe train --solver=pose_solver.prototxt --gpu=$1 \ --weights=../../../model/vgg/VGG_ILSVRC_19_layers.caffemodel \ 2>&1 | tee ./output.txt' % caffe_path)
+    return ('#!/usr/bin/env sh\n %s/build/tools/caffe train --solver=pose_solver.prototxt --gpu=$1 \ --weights=../../../model/vgg/VGG_ILSVRC_19_layers.caffemodel \ 2>&1 | tee ./output.txt' % caffe_path)
 
 if __name__ == "__main__":
 
