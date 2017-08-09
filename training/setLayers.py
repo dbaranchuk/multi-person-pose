@@ -340,7 +340,7 @@ gamma: 0.333\n\
 #stepsize: 29166\n\
 stepsize: 136106 #68053\n\
 # Display every 100 iterations\n\
-display: 5\n\
+display: 500\n\
 # The maximum number of iterations\n\
 max_iter: 600000\n\
 # snapshot intermediate results\n\
@@ -433,7 +433,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     args.inputsize_x, args.inputsize_y = map(int, args.inputsize.split(','))
     exp = args.exp
-    batch_size = 8
+    batch_size = 10
     args.batch_size = batch_size
 
     # Two branch: weight = 1, scale 0.5~1.1, fix the mode, base_lr = 4e-5, batch_size = 10
