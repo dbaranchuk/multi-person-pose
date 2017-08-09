@@ -444,7 +444,7 @@ if __name__ == "__main__":
         dataFolder = '/home/GRAPHICS2/20d_bar/cv/pose/multi-person-pose/COCO_kpt/lmdb_trainVal'
         source = '/home/GRAPHICS2/20d_bar/cv/pose/multi-person-pose/COCO_kpt/lmdb_trainVal'
         base_lr = 4e-5   # 2e-5
-        batch_size = 8
+        batch_size = 10
         np = 56    # num_parts
         lr_mult_distro = [1.0, 1.0, 4.0, 1]
         transform_param = dict(stride=8, crop_size_x=368, crop_size_y=368,
