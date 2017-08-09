@@ -423,7 +423,7 @@ def calcAndWriteStat(sub_dir, layername, kernel, stride, outCH, args):
         json.dump(dictionary, outfile)
 
 def getBash():
-    return ('#!/usr/bin/env sh\n %s/build/tools/caffe train --solver=pose_solver.prototxt --gpu=$1 \ --weights=../../../model/vgg/VGG_ILSVRC_19_layers.caffemodel \ 2>&1 | tee ./output.txt' % caffe_path)
+    return ('#!/usr/bin/env sh\n %s/build/tools/caffe train --solver=pose_solver.prototxt --gpu=$1 --weights=../../model/vgg/VGG_ILSVRC_19_layers.caffemodel 2>&1 | tee ./output.txt' % caffe_path)
 
 if __name__ == "__main__":
 
@@ -438,8 +438,8 @@ if __name__ == "__main__":
 
     # Two branch: weight = 1, scale 0.5~1.1, fix the mode, base_lr = 4e-5, batch_size = 10
     if(exp == 1):
-        directory = 'COCO_exp_caffe/pose56/exp22/'
-        serverFolder = '/home/GRAPHICS2/20d_bar/cv/pose/multi-person-pose/COCO_kpt/pose56/exp22'
+        directory = 'COCO_exp_caffe/baseline/'
+        serverFolder = '/home/GRAPHICS2/20d_bar/cv/pose/multi-person-pose/COCO_kpt/baseline'
         base_folder = '/home/GRAPHICS2/20d_bar/cv/pose/multi-person-pose/'+directory+'model'
         dataFolder = '/home/GRAPHICS2/20d_bar/cv/pose/multi-person-pose/COCO_kpt/lmdb_trainVal'
         source = '/home/GRAPHICS2/20d_bar/cv/pose/multi-person-pose/COCO_kpt/lmdb_trainVal'
